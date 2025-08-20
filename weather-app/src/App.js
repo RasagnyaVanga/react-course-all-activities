@@ -9,11 +9,11 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Example />
+      <Weather />
     </QueryClientProvider>
   );
 }
-function Example() {
+function Weather() {
   const [city, setCity] = useState('');
   const [searchCity, setSearchCity] = useState('');
 
@@ -35,7 +35,8 @@ function Example() {
         }
         return jsonData;
       },
-    enabled: !!searchCity,
+    enabled: !!searchCity, 
+    staleTime: 1000* 60* 60 *1,
   })
 
 
