@@ -10,9 +10,7 @@ export default function useFetch(searchCity) {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const res = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=20f87299df2cf2929a2d76cf2cb60c5d`
-                );
+                const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=20f87299df2cf2929a2d76cf2cb60c5d`);
                 const data = await res.json();
                 if (!res.ok) {
                     throw new Error(data.message || "Failed to fetch");
