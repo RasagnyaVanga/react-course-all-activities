@@ -16,9 +16,9 @@ export default function App() {
   return (
     <>
       <nav>
-        <NavLink to="/description" style={navLinkStyles}>Home</NavLink> |{" "}
-        <NavLink to="/simple" style={navLinkStyles}>About</NavLink> |{" "}
-        <NavLink to="/stateful" style={navLinkStyles}>Contact</NavLink>
+        <NavLink to="/description" style={navLinkStyles}>Description</NavLink> |{" "}
+        <NavLink to="/simple" style={navLinkStyles}>SimpleComponent</NavLink> |{" "}
+        <NavLink to="/stateful" style={navLinkStyles}>StatefulComponent</NavLink>
       </nav>
 
       <Routes>
